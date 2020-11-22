@@ -23,14 +23,13 @@ public class Main {
         System.out.println("1) Manage Tasks");
         System.out.println("2) Exit");
         System.out.println("--------------------------------------------------------------------");
-        System.out.println("Task managment");
-        System.out.println("--------------------------------------------------------------------");
 
         int option = Integer.parseInt(sc.nextLine());
         if (option == 2) {
             return;
         }
         while (option == 1) {
+            System.out.println("--------------------------------------------------------------------");
             System.out.println("1) Create a new task");
             System.out.println("2) Update a task");
             System.out.println("3) Delete a task");
@@ -51,15 +50,14 @@ public class Main {
             if (option2 == 2) {
 
                 System.out.println("What task do you want to update?");
-                for (int i = 0; i < tasks.length; i++) {
-                    System.out.println("#"+ i + " " + tasks[i]);
+                    int a = sc.nextInt();
+                    tasks[a] = new String();
                 }
-                int update = sc.nextInt();
-            }
 
             if (option2 == 3) {
                 System.out.println("What task do you want to delete?");
                 int delete = sc.nextInt();
+                tasks [delete] = null;
             }
             if (option2 == 4)
                 System.out.println("You can save up to 10 tasks!");
@@ -68,14 +66,7 @@ public class Main {
                 System.out.println("#"+ i + " " + tasks[i]);
 
             }
-            System.out.println("--------------------------------------------------------------------");
-            System.out.println("1) Manage Tasks");
-            System.out.println("2) Exit");
-            System.out.println("--------------------------------------------------------------------");
-            System.out.println("Task managment");
-            System.out.println("--------------------------------------------------------------------");
         }
-        tasks[0] = "TVOJE MÁMA";
 
     }
 }
